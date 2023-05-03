@@ -10,10 +10,6 @@ load_dotenv()
 
 
 
-
-
-
-
 class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', ""))
@@ -56,7 +52,7 @@ class Var(object):
     AD4 = str(getenv('AD4', ""))
     AD5 = str(getenv('AD5', ""))
     AD6 = str(getenv('AD6', ""))
-    USERS_CAN_USE = getenv('USERS_CAN_USE', False)
+    USERS_CAN_USE = getenv('USERS_CAN_USE', True)
     ADMINS = (
         [int(i.strip()) for i in os.environ.get("ADMINS").split(",")]
         if os.environ.get("ADMINS")
